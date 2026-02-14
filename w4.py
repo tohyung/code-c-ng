@@ -11,9 +11,9 @@ def tạo_ma_trận_X(x, degree):
     return X
 
 def chỉ_số_R2(y_true, y_pred):
-    ss_res = np.sum((y_true - y_pred) ** 2)
-    ss_tot = np.sum((y_true - np.mean(y_true)) ** 2)
-    return 1 - ss_res / ss_tot
+    residual = np.sum((y_true - y_pred) ** 2)
+    total = np.sum((y_true - np.mean(y_true)) ** 2)
+    return 1 - residual / total
 
 def rmse(y_true, y_pred):
     return np.sqrt(np.mean((y_true - y_pred) ** 2))
