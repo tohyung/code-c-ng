@@ -21,7 +21,7 @@ beta1 = np.linalg.pinv(X1) @ y
 y_pred1 = X1 @ beta1
 r2_1, rmse_1 = evaluate(y, y_pred1)
 
-# dự đoán lợi nhuận t9
+# dự đoán lợi nhuận t9 bậc 1
 x9 = np.array([1, 25, 5, 3.5])
 y9_1 = x9 @ beta1
 
@@ -45,7 +45,7 @@ beta2 = np.linalg.pinv(X2) @ y
 y_pred2 = X2 @ beta2
 r2_2, rmse_2 = evaluate(y, y_pred2)
 
-# Dự đoán tháng 9
+# dự đoán lợi nhuận t9 bậc 2
 x9_poly = np.array([
     1,
     25, 5, 3.5,
